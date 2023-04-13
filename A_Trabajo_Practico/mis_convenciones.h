@@ -1,0 +1,7 @@
+#ifndef MIS_CONVENCIONES_H_INCLUDED
+#define MIS_CONVENCIONES_H_INCLUDED
+
+#define ERROR_DIVISION -1
+#define ERROR_NUM_NEGATIVO -1
+enum boolean {true = 1, false = 0};
+#endif // MIS_CONVENCIONES_H_INCLUDED

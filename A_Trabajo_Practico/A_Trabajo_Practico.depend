@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1679185301 source:c:\git\orga\a_trabajo_practico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"mis_convenciones.h"
+	"prototiposFecha.h"
+
+1679516144 c:\git\orga\a_trabajo_practico\mis_convenciones.h
+
+1679516094 source:c:\git\orga\a_trabajo_practico\impl_prototiposfecha.c
+	<stdlib.h>
+	"mis_convenciones.h"
+	"prototiposFecha.h"
+
+1679153958 c:\git\orga\a_trabajo_practico\prototiposfecha.h
+	"mis_convenciones.h"
+
