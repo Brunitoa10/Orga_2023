@@ -18,7 +18,8 @@ int main(){
         salto();
     if(opcionInt == 5){
         printf("(a) Inicializar arreglo con enteros aleatorios \n");
-        printf("(b) Ordenar arreglo de forma ascendente");
+        printf("(b) Ordenar arreglo de forma ascendente \n");
+        printf("(c) Determinar si los primeros n elementos de un arreglo estan ordenados de forma ascendente\n");
             salto();
         printf("Opcion >> ");
             scanf("%c",&opcionChar);
@@ -32,6 +33,39 @@ int main(){
                 inicializarArreglo(arreglo,TAMANIO);
                 ordenarArregloAscendente(arreglo,TAMANIO);
                 mostrarArreglo(arreglo,TAMANIO);
+            }else{
+                if(opcionChar == 'c'){
+                    printf("Ingrese cantidad de elementos a evaluar (debe ser menor a 10) >> ");
+                        scanf("%d",&opcionInt);
+                        fflush(stdin);
+                        salto();
+                    if(opcionInt<=TAMANIO){
+                        inicializarArreglo(arreglo,TAMANIO);
+                        printf("Antes de acomodar");
+                            salto();
+                        mostrarArreglo(arreglo,TAMANIO);
+                            salto();
+                        if(nElementosOrdenadosAscentes(arreglo,opcionInt)){
+                            printf("Verifica");
+                        }else{
+                            printf("No verifica");
+                        }
+                            salto();
+                        printf("Luego de acomodar");
+                        ordenarArregloAscendente(arreglo,TAMANIO);
+                            salto();
+                         mostrarArreglo(arreglo,TAMANIO);
+                            salto();
+                        if(nElementosOrdenadosAscentes(arreglo,opcionInt) == true){
+                            printf("Verifica");
+                        }else{
+                            printf("No verifica");
+                        }
+                    }else{
+                        printf("Error n > 10");
+                        exit(0);
+                    }
+                }
             }
         }
     }

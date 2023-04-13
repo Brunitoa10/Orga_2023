@@ -8,4 +8,9 @@ void mostrarArreglo(int arr[],int longitud);
 
 //5b
 void ordenarArregloAscendente(int arr[],int longitud);
+
+//5c
+int nElementosOrdenadosAscentes(int arr[],int n);
+
+
 #endif // PROTOTIPOSFUNCIONES_H_INCLUDED
