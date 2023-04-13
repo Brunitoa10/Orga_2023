@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1679151604 source:c:\git\orga\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+	"mis_convenciones.h"
+
+1679151457 c:\git\orga\calculadora\calculadora.h
+	"mis_convenciones.h"
+
+1679121329 source:c:\git\orga\calculadora\calculadora.c
+	"calculadora.h"
+	<stdlib.h>
+
+1679151534 c:\git\orga\calculadora\mis_convenciones.h
+
