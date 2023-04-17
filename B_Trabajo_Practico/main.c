@@ -20,6 +20,7 @@ int main(){
         printf("(a) Inicializar arreglo con enteros aleatorios \n");
         printf("(b) Ordenar arreglo de forma ascendente \n");
         printf("(c) Determinar si los primeros n elementos de un arreglo estan ordenados de forma ascendente\n");
+        printf("(d) Intercala dos arreglos ordenados de forma ascendente\n");
             salto();
         printf("Opcion >> ");
             scanf("%c",&opcionChar);
@@ -64,6 +65,33 @@ int main(){
                     }else{
                         printf("Error n > 10");
                         exit(0);
+                    }
+                }else{
+                    if(opcionChar == 'd'){
+                        int arrb[TAMANIO];
+                        inicializarArreglo(arreglo,TAMANIO);
+                        inicializarArreglo(arrb,TAMANIO);
+                        printf("Arreglo A antes de ordenar");
+                            salto();
+                        mostrarArreglo(arreglo,TAMANIO);
+                            salto();
+                        printf("Arreglo B antes de ordenar");
+                            salto();
+                        mostrarArreglo(arrb,TAMANIO);
+                            salto();
+                        ordenarArregloAscendente(arreglo,TAMANIO);
+                        ordenarArregloAscendente(arrb,TAMANIO);
+                        printf("Arreglo A luego de ordenar");
+                            salto();
+                        mostrarArreglo(arreglo,TAMANIO);
+                            salto();
+                        printf("Arreglo B luego de ordenar");
+                            salto();
+                        mostrarArreglo(arrb,TAMANIO);
+                            salto();
+                        printf("Intercalar");
+                            salto();
+                        intercalar(arreglo,TAMANIO,arrb,TAMANIO);
                     }
                 }
             }

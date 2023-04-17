@@ -12,5 +12,6 @@ void ordenarArregloAscendente(int arr[],int longitud);
 //5c
 int nElementosOrdenadosAscentes(int arr[],int n);
 
-
+//5d
+void intercalar(int arr[],int n, int arrb[],int m);
 #endif // PROTOTIPOSFUNCIONES_H_INCLUDED

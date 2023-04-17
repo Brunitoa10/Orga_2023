@@ -59,11 +59,46 @@ void ordenarArregloAscendente(int arr[],int n){
     mSort(arr,0,n-1);
 }
 
-//5C
+//5c
 int nElementosOrdenadosAscentes(int arr[],int n){
     int cumple = true;
     for(int pos = 0; pos < n && cumple; pos++){
         cumple = (arr[pos] < arr[pos+1]) ? true : false;
     }
     return cumple;
+}
+
+//5d
+void intercalar(int arr[],int n, int arrb[],int m){
+    int arrNuevo[n+m];
+    int p1 = 0, p2 = 0, p3 = 0;
+    while(p1 < n && p2 < m){
+        if(arr[p1]<arrb[p2]){
+            arrNuevo[p3] = arr[p1];
+            p1++;
+            p3++;
+        }else{
+            if(arr[p1]>arrb[p2]){
+                arrNuevo[p3] = arrb[p2];
+                p2++;
+                p3++;
+            }else{
+                arrNuevo[p3] = arr[p1];
+                p3++;
+                p2++;
+                p1++;
+            }
+        }
+    }
+    while(p1 < n){
+        arrNuevo[p3] = arr[p1];
+        p3++;
+        p1++;
+    }
+    while(p2 < m){
+        arrNuevo[p3] = arrb[p2];
+        p3++;
+        p2++;
+    }
+    mostrarArreglo(arrNuevo,n+m);
 }
