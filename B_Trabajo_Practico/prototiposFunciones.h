@@ -14,4 +14,8 @@ int nElementosOrdenadosAscentes(int arr[],int n);
 
 //5d
 void intercalar(int arr[],int n, int arrb[],int m);
+
+//6a
+void reemplazar(int arr[],int a, int n, int longitud);
+
 #endif // PROTOTIPOSFUNCIONES_H_INCLUDED

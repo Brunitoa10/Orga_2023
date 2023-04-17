@@ -102,3 +102,11 @@ void intercalar(int arr[],int n, int arrb[],int m){
     }
     mostrarArreglo(arrNuevo,n+m);
 }
+
+void reemplazar(int arr[],int a, int n, int longitud){
+    for(int pos = 0; pos<longitud; pos++){
+        if(arr[pos] == a){
+            arr[pos] = n;
+        }
+    }
+}

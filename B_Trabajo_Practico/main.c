@@ -96,6 +96,40 @@ int main(){
                 }
             }
         }
+    }else{
+        if(opcionInt == 6){
+            printf("Dado un arreglo de enteros y dos enteros a y n, modifique el arreglo de forma tal que cada aparicion del entero 'a' sea reemplazada por el entero n.\n");
+                salto();
+            printf("(a) Sin punteros\n");
+            printf("(b) Con puteros\n");
+                salto();
+            printf("Opcion >> ");
+                scanf("%c",&opcionChar);
+                fflush(stdin);
+                salto();
+            if(opcionChar == 'a'){
+                inicializarArreglo(arreglo,TAMANIO);
+                ordenarArregloAscendente(arreglo,TAMANIO);
+                mostrarArreglo(arreglo,TAMANIO);
+                    salto();
+                reemplazar(arreglo,19169,5,TAMANIO);
+                    salto();
+                mostrarArreglo(arreglo,TAMANIO);
+            }else{
+                if(opcionChar == 'b'){
+                    int* arr;
+                    arr = (int*) malloc(TAMANIO*sizeof(int));
+                    inicializarArreglo(arr,TAMANIO);
+                    mostrarArreglo(arr,TAMANIO);
+                        salto();
+                    reemplazar(arr,19169,5,TAMANIO);
+                        salto();
+                    mostrarArreglo(arr,TAMANIO);
+                }else{
+                    exit(-1);
+                }
+            }
+        }
     }
     salto();
     return 0;
