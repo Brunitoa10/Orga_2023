@@ -15,3 +15,19 @@
 
 1681267792 e:\2023\orga\c_trabajo_practico\mis_conveciones.h
 
+1681393306 source:e:\2023\orga\b_trabajo_practico\impl_prototipos.c
+	"prototiposFunciones.h"
+	<stdlib.h>
+	<stdio.h>
+	"MIs_conveciones.h"
+
+1681357329 e:\2023\orga\b_trabajo_practico\prototiposfunciones.h
+
+1681267792 e:\2023\orga\b_trabajo_practico\mis_conveciones.h
+
+1681392232 source:e:\2023\orga\b_trabajo_practico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"prototiposFunciones.h"
+	"MIs_conveciones.h"
+
