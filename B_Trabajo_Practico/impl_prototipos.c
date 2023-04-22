@@ -110,3 +110,17 @@ void reemplazar(int arr[],int a, int n, int longitud){
         }
     }
 }
+
+//9
+void imprimirArchivo(FILE *archivo){
+    char caracter;
+    while((caracter = fgetc(archivo)) != EOF){
+        printf("%c",caracter);
+    }
+}
+void copiarContenido(FILE *archivoA,FILE *archivoB){
+    char caracter;
+    while((caracter = fgetc(archivoA)) != EOF){
+        fputc(caracter,archivoB);
+    }
+}

@@ -1,6 +1,6 @@
 #ifndef PROTOTIPOSFUNCIONES_H_INCLUDED
 #define PROTOTIPOSFUNCIONES_H_INCLUDED
-
+#include <stdio.h>
 void salto();
 //5a
 void inicializarArreglo(int arr[],int longitud);
@@ -18,4 +18,8 @@ void intercalar(int arr[],int n, int arrb[],int m);
 //6a
 void reemplazar(int arr[],int a, int n, int longitud);
 
+//9
+void imprimirArchivo(FILE *archivo);
+
+void copiarContenido(FILE *archivoA,FILE *archivoB);
 #endif // PROTOTIPOSFUNCIONES_H_INCLUDED

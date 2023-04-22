@@ -4,7 +4,7 @@
 #include "MIs_conveciones.h"
 
 
-int main(){
+int main(int argv, char* args[]){
     int opcionInt;
     char opcionChar;
     int arreglo[TAMANIO];
@@ -12,7 +12,7 @@ int main(){
         salto();
     printf("Menu de opciones");
         salto();
-    printf("5 - 6 - 7 - 8 - 9 - 10 >> ");
+    printf("5 - 6 - 7 - 9 - 10 >> ");
         scanf("%d",&opcionInt);
         fflush(stdin);
         salto();
@@ -127,6 +127,41 @@ int main(){
                     mostrarArreglo(arr,TAMANIO);
                 }else{
                     exit(-1);
+                }
+            }
+        }else{
+            if(opcionInt == 7){
+                printf("No se encuentra implementado");
+            }else{
+                if(opcionInt == 9){
+                    FILE *archivoA,*archivoB;
+
+                    archivoA = fopen("archivoA.txt","r");
+                    archivoB = fopen("archivoB.txt","w+");
+
+                    if(archivoA == NULL || archivoB == NULL){
+                        perror("Error en la apertura de los archivos");
+                        exit(ARCHIVO_CORRUPTO);
+                    }else{
+                        printf("Mostrando contenido archivoA");
+                            salto();
+                        imprimirArchivo(archivoA);
+                            salto();
+                        printf("Mostrando contenido archivoB");
+                        imprimirArchivo(archivoB);
+                            salto();
+                        fseek(archivoA,0,SEEK_SET);//vuelve el puntero al inicio del archivo
+                        fseek(archivoB,0,SEEK_SET);//vuelve el puntero al inicio del archivo
+                        copiarContenido(archivoA,archivoB);
+                        fclose(archivoB);
+                        archivoB = fopen("archivoB.txt","r");
+                        printf("Luego de copiar el contenido de A en B");
+                            salto();
+                        imprimirArchivo(archivoB);
+
+                    }
+                    fclose(archivoA);
+                    fclose(archivoB);
                 }
             }
         }
