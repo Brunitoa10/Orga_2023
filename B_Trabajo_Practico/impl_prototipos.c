@@ -112,15 +112,44 @@ void reemplazar(int arr[],int a, int n, int longitud){
 }
 
 //9
+//char linea[MAX_LINEAS];
+char *linea;
+
+
 void imprimirArchivo(FILE *archivo){
-    char caracter;
-    while((caracter = fgetc(archivo)) != EOF){
-        printf("%c",caracter);
+    int contador = 1;
+    linea = (char *)malloc(sizeof(char));
+    while(fgets(linea,MAX_LINEAS,archivo) != NULL && contador < MAX_LINEAS){
+        printf("%s",linea);
+        contador++;
     }
+    free(linea);
 }
+
+//leer linea completa
 void copiarContenido(FILE *archivoA,FILE *archivoB){
-    char caracter;
-    while((caracter = fgetc(archivoA)) != EOF){
-        fputc(caracter,archivoB);
+    int contador = 1;
+    linea = (char *)malloc(sizeof(char));
+    while(fgets(linea,MAX_LINEAS,archivoA) != NULL && contador < MAX_LINEAS){
+        fputs(linea,archivoB);
+        contador++;
     }
+    free(linea);
+}
+
+//10
+void buscarPalabraEnTexto(FILE *archivo, char palabra){
+    linea = (char *)malloc(sizeof(char));
+    int num_Linea = 1;
+    int corte = false;
+
+    while(!corte && fgets(linea,MAX_LINEAS, archivo) != NULL){
+        if(strstr(linea,palabra) != NULL){
+            corte = true;
+            printf("La palabra %s esta en el numero de linea (%i) y el texto es: %s",palabra,num_Linea,linea);
+        }else{
+            num_Linea++;
+        }
+    }
+    free(linea);
 }

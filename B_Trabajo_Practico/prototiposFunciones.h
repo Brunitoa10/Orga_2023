@@ -22,4 +22,7 @@ void reemplazar(int arr[],int a, int n, int longitud);
 void imprimirArchivo(FILE *archivo);
 
 void copiarContenido(FILE *archivoA,FILE *archivoB);
+
+//10
+void buscarPalabraEnTexto(FILE *archivo, char palabra);
 #endif // PROTOTIPOSFUNCIONES_H_INCLUDED

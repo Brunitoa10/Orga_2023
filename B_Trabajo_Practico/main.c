@@ -146,15 +146,16 @@ int main(int argv, char* args[]){
                         printf("Mostrando contenido archivoA");
                             salto();
                         imprimirArchivo(archivoA);
+                        fseek(archivoA,0,SEEK_SET);//vuelve el puntero al inicio del archivoA
                             salto();
+
                         printf("Mostrando contenido archivoB");
                         imprimirArchivo(archivoB);
                             salto();
-                        fseek(archivoA,0,SEEK_SET);//vuelve el puntero al inicio del archivo
-                        fseek(archivoB,0,SEEK_SET);//vuelve el puntero al inicio del archivo
+
                         copiarContenido(archivoA,archivoB);
-                        fclose(archivoB);
-                        archivoB = fopen("archivoB.txt","r");
+                        fseek(archivoB,0,SEEK_SET);//vuelve el puntero al inicio del archivoB
+
                         printf("Luego de copiar el contenido de A en B");
                             salto();
                         imprimirArchivo(archivoB);
